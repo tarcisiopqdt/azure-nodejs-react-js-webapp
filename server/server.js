@@ -2,7 +2,7 @@
 require('dotenv').config()
 const express = require('express');
 const bodyParser = require('body-parser');
-const cursoModuloRoutes = require('./server/routes')
+const cursoModuloRoutes = require('./routes')
 var app = express();
 
 app.use(bodyParser.json());

@@ -1,7 +1,7 @@
 {
   "scripts": {
-    "start": "cd client/react-webapp && yarn && yarn run build && cd ../.. && node server",
-    "dev": "node server"
+    "start": "cd client/react-webapp && yarn && yarn run build && cd ../.. && node server/server",
+    "dev": "node server/server"
   },
   "dependencies": {
     "body-parser": "^1.19.0",
