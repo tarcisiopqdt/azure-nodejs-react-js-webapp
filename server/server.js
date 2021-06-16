@@ -15,9 +15,11 @@ app.use(express.static("." + pathArquivosDoFront))
 // ROTAS
 app.use('/api', cursoModuloRoutes)
 
+//Dispensado se não for usar react-router
 app.get('/*', (req, res) => {
-  res.sendFile('index.html', { root: __dirname + pathArquivosDoFront })
+  res.sendFile('index.html', { root: './client/react-webapp/build' })
 })
+//Fim Dispensado se não for usar react-router
 
 const { PORT } = process.env;
 app.listen(PORT, () => console.log(`API NodeJS está on-line na porta ${PORT}`))
