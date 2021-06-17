@@ -134,7 +134,9 @@ const Modulo1 = () => {
   }
 
   const handleSubmit = () => {
-    console.log(answerers);
+  
+    console.log("perguntasModulo1",perguntasModulo1)
+    console.log("answerers",answerers);
   }
 
   return (
