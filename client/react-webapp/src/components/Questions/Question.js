@@ -1,4 +1,5 @@
 import React from 'react'
+import './question.css';
 
 const Question = ({ perguntas, handleChange }) => {
   const [selectedAnswers, setselectedAnswers] = React.useState({})
@@ -6,14 +7,14 @@ const Question = ({ perguntas, handleChange }) => {
   const handleClick = (pergunta, alternativa) => {
     const newAnswerers = selectedAnswers
     newAnswerers[pergunta.id] = alternativa.id
-    setselectedAnswers({...newAnswerers})
+    setselectedAnswers({ ...newAnswerers })
 
-    
+
     handleChange(pergunta, alternativa)
   }
 
   return (
-    <div>
+    <div className={'question'}>
       {perguntas.map(pergunta => {
         return <div key={pergunta.id}>
           <h2>{pergunta.title}</h2>
